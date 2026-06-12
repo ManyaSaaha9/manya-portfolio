@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Portfolio of Bingi Manya Sahasra - AI & ML Student, Software Developer, and Aspiring AI Engineer. View projects, skills, certifications, and download resume.">
+  <meta name="keywords" content="Bingi Manya Sahasra, Portfolio, AI student, Machine Learning Developer, Software Engineer, Resume, Streamlit, NLP, Hyderabad, India">
+  <meta name="author" content="Bingi Manya Sahasra">
+  <meta name="theme-color" content="#0F172A">
+  <title>Bingi Manya Sahasra | AI & ML Student & Software Developer</title>
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AI Theme Constellation Particle Background Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Sticky Navigation Header -->
+    <header id="header">
+      <div class="nav-container">
+        <a href="#hero" class="logo" id="logo-link">MANYA<span>SAHASRA</span></a>
+        
+        <nav class="nav-links" id="nav-menu" aria-label="Main Navigation">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="assets/docs/bingi_manya_sahasra_resume.pdf" class="nav-btn" download="Bingi_Manya_Sahasra_Resume.pdf"><i class="fa-solid fa-download"></i> Resume</a>
+          <button id="open-settings-btn" class="nav-settings-btn" aria-label="Open Resume Manager"><i class="fa-solid fa-cog"></i></button>
+        </nav>
+        
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+      <!-- 1. Hero Section -->
+      <section id="hero" class="reveal active">
+        <div class="hero-content">
+          <p class="hero-subtitle">Welcome to my Space</p>
+          <h1 class="hero-title">MANYA <span>SAHASRA</span></h1>
+          <div class="hero-roles">
+            <span class="role">AI & ML Student</span> | <span>Software Developer</span> | <span>Problem Solver</span>
+          </div>
+          <p class="hero-desc">
+            Passionate Computer Science student specializing in Artificial Intelligence and Machine Learning with experience building AI-powered applications using Python, NLP, Machine Learning, and Generative AI. Focused on solving real-world problems through technology.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+            <a href="assets/docs/bingi_manya_sahasra_resume.pdf" class="btn btn-secondary" download="Bingi_Manya_Sahasra_Resume.pdf"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+            <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:sahasramanya9@gmail.com" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. About Me Section -->
+      <section id="about" class="reveal">
+        <h2 class="section-title">About <span>Me</span></h2>
+        
+        <div class="about-grid">
+          <div class="about-info">
+            <p class="about-text">
+              I am an AI & ML student passionate about software development, machine learning, and emerging technologies. I enjoy building intelligent systems, exploring innovative ideas, and collaborating on projects that create real-world impact.
+            </p>
+            
+            <div class="about-details">
+              <div class="detail-card">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <span class="detail-title">Degree & Branch</span>
+                <span class="detail-value">B.Tech in CSE (AI & ML)</span>
+                <span class="detail-sub">Malla Reddy College of Engineering & Technology</span>
+              </div>
+              
+              <div class="detail-card">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span class="detail-title">Location</span>
+                <span class="detail-value">Hyderabad, India</span>
+                <span class="detail-sub">Open to relocation & remote roles</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-badges-panel">
+            <div class="academic-card">
+              <div class="cgpa-container">
+                <div class="cgpa-circle">
+                  <span class="cgpa-value">9.5</span>
+                  <span class="cgpa-label">CGPA</span>
+                </div>
+                <div class="cgpa-details">
+                  <h4>Academic Excellence</h4>
+                  <p>Malla Reddy College of Engineering & Technology (MRCET)</p>
+                </div>
+              </div>
+              
+              <div class="badge-row">
+                <span class="badge-item"><i class="fa-solid fa-briefcase"></i> AI Intern @ Infosys Springboard</span>
+                <span class="badge-item"><i class="fa-solid fa-users-gear"></i> Student Coordinator</span>
+                <span class="badge-item"><i class="fa-solid fa-user-tie"></i> Class Representative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Skills Section -->
+      <section id="skills" class="reveal">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        
+        <div class="skills-filter" role="tablist" aria-label="Skills Categorization">
+          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All Skills</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="languages">Programming</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="web">Web Tech</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="ai">AI & ML</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="lib">Libraries & Frameworks</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="tools">Tools</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="concepts">Core Concepts</button>
+        </div>
+        
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card" data-category="languages">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-code"></i>
+              <h3>Programming</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Java</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">C</span><span class="skill-percent">75%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="75%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">SQL</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-category-card" data-category="web">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h3>Web Technologies</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">HTML & CSS</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">React.js</span><span class="skill-percent">75%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI & Machine Learning -->
+          <div class="skill-category-card" data-category="ai">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-brain"></i>
+              <h3>AI & Machine Learning</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Machine Learning</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">NLP</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Generative AI</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Prompt Engineering</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="90%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Libraries & Frameworks -->
+          <div class="skill-category-card" data-category="lib">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-cubes"></i>
+              <h3>Libraries & Frameworks</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Pandas & NumPy</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Scikit-learn</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Streamlit</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <h3>Tools</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Git & GitHub</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">VS Code</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Tableau</span><span class="skill-percent">70%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="70%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Concepts -->
+          <div class="skill-category-card" data-category="concepts">
+            <div class="skill-card-header">
+              <i class="fa-solid fa-gears"></i>
+              <h3>Core Concepts</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Data Structures & Algorithms</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Object Oriented Programming</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">DBMS & REST APIs</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span class="skill-name">Unit Testing & Debugging</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="80%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Experience Section -->
+      <section id="experience" class="reveal">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">AI Intern</h3>
+                  <span class="timeline-company">Infosys Springboard</span>
+                </div>
+                <span class="timeline-date">Jun 2024 - Present</span>
+              </div>
+              <ul class="timeline-responsibilities">
+                <li>
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                  <span>Developed and implemented an AI-powered ticket categorization system designed to automate classification.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                  <span>Applied Natural Language Processing (NLP) techniques for structural analysis and context understanding.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                  <span>Participated in writing comprehensive unit tests and debugging issues across system components.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                  <span>Contributed to internal API documentation and optimization of processing workflows.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Projects Section -->
+      <section id="projects" class="reveal">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        
+        <div class="projects-grid">
+          <!-- Project 1: AI Resume Analyzer -->
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <div class="project-icon-box">
+                  <i class="fa-solid fa-file-invoice"></i>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ManyaSaaha9/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository - AI Resume Analyzer"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>AI Resume Analyzer</h3>
+                <ul class="project-features">
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Evaluates candidate resumes to generate an ATS compatibility score.</span></li>
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Extracts text and structures from PDF files using parser modules.</span></li>
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Generates descriptive resume feedback for key skill gaps.</span></li>
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Applies Natural Language Processing (NLP) to extract semantic relevance.</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Machine Learning</span>
+            </div>
+          </article>
+
+          <!-- Project 2: AI Copilot for Software Engineers -->
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <div class="project-icon-box">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ManyaSaaha9/AI_COPILOT" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository - AI Copilot"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>AI Copilot for Software Engineers</h3>
+                <ul class="project-features">
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Provides real-time coding suggestions and autocomplete support.</span></li>
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Analyzes codebase syntax to isolate, identify, and debug logic errors.</span></li>
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Processes query workflows dynamically using AI engines.</span></li>
+                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Generates structured markdown code documentation automatically.</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Generative AI</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 6. Leadership & Activities Section -->
+      <section id="leadership" class="reveal">
+        <h2 class="section-title">Leadership <span>Experience</span></h2>
+        
+        <div class="leadership-grid">
+          <!-- Student Coordinator -->
+          <div class="leadership-card">
+            <div class="leadership-head">
+              <div class="leadership-icon">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="leadership-title">
+                <h3>Student Coordinator</h3>
+                <p>MRCET CSE Department</p>
+              </div>
+            </div>
+            <ul class="leadership-list">
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Organized local and inter-college hackathons and developer challenges.</span></li>
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Managed project expo tracks and coordinated team evaluations.</span></li>
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Conducted departmental technical quizzes and coding rounds.</span></li>
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Facilitated student activities and hands-on technical labs.</span></li>
+            </ul>
+          </div>
+
+          <!-- Class Representative -->
+          <div class="leadership-card">
+            <div class="leadership-head">
+              <div class="leadership-icon">
+                <i class="fa-solid fa-id-card-clip"></i>
+              </div>
+              <div class="leadership-title">
+                <h3>Class Representative</h3>
+                <p>CSE (AI & ML) Batch</p>
+              </div>
+            </div>
+            <ul class="leadership-list">
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Represented student academic feedback and logistical concerns.</span></li>
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Facilitated efficient daily communication between faculty and peers.</span></li>
+              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Supported departmental coordination of lectures, exams, and labs.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Certifications Section -->
+      <section id="certifications" class="reveal">
+        <h2 class="section-title">Professional <span>Certifications</span></h2>
+        
+        <div class="cert-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="cert-info">
+              <h3>IBM SkillsBuild</h3>
+              <p>Artificial Intelligence Fundamentals</p>
+            </div>
+          </div>
+          <!-- Cert 2 -->
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+            <div class="cert-info">
+              <h3>Deloitte Technology</h3>
+              <p>Job Simulation Program Certificate</p>
+            </div>
+          </div>
+          <!-- Cert 3 -->
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="cert-info">
+              <h3>Google Cloud</h3>
+              <p>Cloud Study Jams Program</p>
+            </div>
+          </div>
+          <!-- Cert 4 -->
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="cert-info">
+              <h3>FreeCodeCamp</h3>
+              <p>Responsive Web Design & Developer Certification</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Contact Section -->
+      <section id="contact" class="reveal">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <h3>Let's talk about your opportunities!</h3>
+            <p>
+              I am open to internships, entry-level software engineering roles, and collaborative AI/ML development. Reach out via email or connect with me on socials!
+            </p>
+            
+            <div class="contact-channels">
+              <a href="mailto:sahasramanya9@gmail.com" class="contact-channel" aria-label="Email Sahasra">
+                <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="channel-details">
+                  <span class="channel-label">Email Address</span>
+                  <span class="channel-value">sahasramanya9@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="LinkedIn Sahasra">
+                <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="channel-details">
+                  <span class="channel-label">LinkedIn</span>
+                  <span class="channel-value">linkedin.com/in/manya2929</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer" class="contact-channel" aria-label="GitHub Sahasra">
+                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="channel-details">
+                  <span class="channel-label">GitHub Link</span>
+                  <span class="channel-value">github.com/ManyaSaaha9</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrapper">
+            <form id="portfolio-contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Full Name</label>
+                  <input type="text" id="form-name" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Email Address</label>
+                  <input type="email" id="form-email" class="form-control" placeholder="yourname@domain.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" class="form-control" placeholder="Regarding..." required>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" class="form-control" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" style="width: 100%; border: none; cursor: pointer;">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Scroll To Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Notification Toast Popup -->
+    <div class="toast" id="toast-message" role="alert" aria-live="assertive">
+      <i class="fa-solid fa-circle-check"></i>
+      <div class="toast-msg">
+        <h4 id="toast-title">Message Sent!</h4>
+        <p id="toast-body">Thank you. I will get back to you shortly.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">MANYA<span>SAHASRA</span></div>
+        <p class="footer-copy">&copy; 2026 Bingi Manya Sahasra. All Rights Reserved. | <button id="footer-settings-btn" class="footer-admin-link"><i class="fa-solid fa-user-lock"></i> Resume Manager</button></p>
+        <div class="footer-socials">
+          <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile Link"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile Link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:sahasramanya9@gmail.com" aria-label="Mail Link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Resume Manager Modal -->
+    <div class="modal-overlay" id="settings-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-card">
+        <button class="modal-close-btn" id="close-settings-btn" aria-label="Close Modal">&times;</button>
+        
+        <div class="modal-header">
+          <i class="fa-solid fa-folder-open modal-header-icon"></i>
+          <div>
+            <h3 id="modal-title">Resume Manager</h3>
+            <p class="modal-subtitle">Upload PDF to update this browser, or place your file at <code>assets/docs/bingi_manya_sahasra_resume.pdf</code> to update permanently.</p>
+          </div>
+        </div>
+        
+        <div class="modal-body">
+          <div class="upload-dropzone" id="upload-zone">
+            <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+            <p class="upload-text">Drag & drop your PDF resume here, or <span>browse files</span></p>
+            <p class="upload-hint">Only PDF files are supported. Max size: 3MB.</p>
+            <input type="file" id="resume-file-input" accept=".pdf" style="display: none;">
+          </div>
+          
+          <div class="resume-status-card" id="resume-status-card">
+            <div class="status-icon-box" id="status-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="status-details">
+              <span class="status-label">Active Resume Source</span>
+              <span class="status-filename" id="status-filename">Default System Resume</span>
+              <span class="status-meta" id="status-meta">Built-in static PDF</span>
+            </div>
+            <button class="btn-delete-resume" id="delete-resume-btn" aria-label="Remove custom resume" title="Revert to default resume">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="modal-cancel-btn">Close</button>
+          <a href="assets/docs/bingi_manya_sahasra_resume.pdf" id="modal-download-test-btn" class="btn btn-primary" download="Bingi_Manya_Sahasra_Resume.pdf">
+            <i class="fa-solid fa-file-arrow-down"></i> Test Download
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Javascript Core Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
