@@ -162,18 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Scroll Reveal Animations (IntersectionObserver)
   // ==========================================
   const revealElements = document.querySelectorAll('.reveal');
-  const skillBars = document.querySelectorAll('.skill-bar-fill');
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        
-        // Trigger skill bars animations when Skills section is revealed
-        if (entry.target.id === 'skills') {
-          animateSkillBars();
-        }
-        
         observer.unobserve(entry.target);
       }
     });
@@ -185,13 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => {
     revealObserver.observe(el);
   });
-
-  function animateSkillBars() {
-    skillBars.forEach(bar => {
-      const targetPercent = bar.getAttribute('data-percent');
-      bar.style.width = targetPercent;
-    });
-  }
 
 
   // ==========================================
@@ -330,182 +316,6 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   });
-
-  // ==========================================
-  // 8. Resume Manager Dialog & LocalStorage File Upload
-  // ==========================================
-  const openSettingsBtn = document.getElementById('open-settings-btn');
-  const footerSettingsBtn = document.getElementById('footer-settings-btn');
-  const settingsModal = document.getElementById('settings-modal');
-  const closeSettingsBtn = document.getElementById('close-settings-btn');
-  const modalCancelBtn = document.getElementById('modal-cancel-btn');
-  const uploadZone = document.getElementById('upload-zone');
-  const fileInput = document.getElementById('resume-file-input');
-  const deleteResumeBtn = document.getElementById('delete-resume-btn');
-  const statusFilename = document.getElementById('status-filename');
-  const statusMeta = document.getElementById('status-meta');
-  const statusIcon = document.getElementById('status-icon');
-  const testDownloadBtn = document.getElementById('modal-download-test-btn');
-  const resumeDownloadLinks = document.querySelectorAll('a[download]');
-
-  const defaultResumePath = 'assets/docs/bingi_manya_sahasra_resume.pdf';
-  const defaultResumeName = 'Bingi_Manya_Sahasra_Resume.pdf';
-
-  function openModal() {
-    settingsModal.classList.add('show');
-    settingsModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    updateStatusCard();
-  }
-
-  function closeModal() {
-    settingsModal.classList.remove('show');
-    settingsModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  openSettingsBtn.addEventListener('click', openModal);
-  footerSettingsBtn.addEventListener('click', openModal);
-  closeSettingsBtn.addEventListener('click', closeModal);
-  modalCancelBtn.addEventListener('click', closeModal);
-
-  settingsModal.addEventListener('click', (e) => {
-    if (e.target === settingsModal) {
-      closeModal();
-    }
-  });
-
-  uploadZone.addEventListener('click', () => fileInput.click());
-  
-  uploadZone.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    uploadZone.classList.add('dragover');
-  });
-
-  uploadZone.addEventListener('dragleave', () => {
-    uploadZone.classList.remove('dragover');
-  });
-
-  uploadZone.addEventListener('drop', (e) => {
-    e.preventDefault();
-    uploadZone.classList.remove('dragover');
-    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      handleFile(e.dataTransfer.files[0]);
-    }
-  });
-
-  fileInput.addEventListener('change', (e) => {
-    if (e.target.files && e.target.files.length > 0) {
-      handleFile(e.target.files[0]);
-    }
-  });
-
-  function formatBytes(bytes, decimals = 2) {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const dm = decimals < 0 ? 0 : decimals;
-    const sizes = ['Bytes', 'KB', 'MB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
-  }
-
-  function handleFile(file) {
-    if (file.type !== 'application/pdf') {
-      triggerToast(false, 'Invalid File', 'Only PDF files are supported.');
-      return;
-    }
-
-    const maxSize = 3 * 1024 * 1024; // 3MB limit
-    if (file.size > maxSize) {
-      triggerToast(false, 'File Too Large', 'Please upload a PDF under 3MB to fit local browser storage.');
-      return;
-    }
-
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      try {
-        const base64Data = e.target.result;
-        const uploadDate = new Date().toLocaleDateString(undefined, {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit'
-        });
-
-        const resumeMetadata = {
-          name: file.name,
-          size: file.size,
-          date: uploadDate,
-          data: base64Data
-        };
-
-        localStorage.setItem('manya_custom_resume', JSON.stringify(resumeMetadata));
-        applyCustomResume(resumeMetadata);
-        triggerToast(true, 'Resume Uploaded!', 'Your custom resume is active and ready for download.');
-      } catch (err) {
-        triggerToast(false, 'Upload Failed', 'Error reading and saving the PDF file. Please try again.');
-        console.error(err);
-      }
-    };
-    reader.readAsDataURL(file);
-  }
-
-  function applyCustomResume(metadata) {
-    resumeDownloadLinks.forEach(link => {
-      link.href = metadata.data;
-      link.download = metadata.name || defaultResumeName;
-    });
-    updateStatusCard();
-  }
-
-  function restoreDefaultResume() {
-    localStorage.removeItem('manya_custom_resume');
-    resumeDownloadLinks.forEach(link => {
-      link.href = defaultResumePath;
-      link.download = defaultResumeName;
-    });
-    updateStatusCard();
-    triggerToast(true, 'System Reverted', 'Reverted back to the default fallback resume.');
-  }
-
-  deleteResumeBtn.addEventListener('click', restoreDefaultResume);
-
-  function updateStatusCard() {
-    const stored = localStorage.getItem('manya_custom_resume');
-    if (stored) {
-      try {
-        const metadata = JSON.parse(stored);
-        statusFilename.innerText = metadata.name;
-        statusMeta.innerText = `Size: ${formatBytes(metadata.size)} | Uploaded: ${metadata.date}`;
-        statusIcon.className = 'status-icon-box success';
-        statusIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-        deleteResumeBtn.style.display = 'flex';
-      } catch (err) {
-        restoreDefaultResume();
-      }
-    } else {
-      statusFilename.innerText = 'Default System Resume';
-      statusMeta.innerText = 'Built-in static fallback PDF';
-      statusIcon.className = 'status-icon-box fallback';
-      statusIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
-      deleteResumeBtn.style.display = 'none';
-    }
-  }
-
-  function initResumeManager() {
-    const stored = localStorage.getItem('manya_custom_resume');
-    if (stored) {
-      try {
-        const metadata = JSON.parse(stored);
-        applyCustomResume(metadata);
-      } catch (err) {
-        localStorage.removeItem('manya_custom_resume');
-      }
-    }
-  }
-
-  initResumeManager();
 
 });
 
