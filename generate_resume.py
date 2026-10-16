@@ -1,254 +1,189 @@
+# Resume PDF generator matching Bingi Manya Sahasra's resume
 import os
 
-pdf_template = """%PDF-1.4
-1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
-endobj
-2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
-endobj
-3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
-endobj
-4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
-endobj
-5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
-endobj
-6 0 obj
-<< /Length {stream_len} >>
-stream
-BT
-/F2 26 Tf
-50 780 Td
-(BINGI MANYA SAHASRA) Tj
-/F1 12 Tf
-0 -24 Td
-(Hyderabad, India | sahasramanya9@gmail.com | linkedin.com/in/manya2929 | github.com/ManyaSaaha9) Tj
-0 -25 Td
-(--------------------------------------------------------------------------------------------------------------------------------------) Tj
-/F2 16 Tf
-0 -30 Td
-(PROFESSIONAL SUMMARY) Tj
-/F1 11 Tf
-0 -18 Td
-(Passionate Computer Science student specializing in Artificial Intelligence and Machine Learning with) Tj
-0 -15 Td
-(experience building AI-powered applications using Python, NLP, Machine Learning, and Generative AI.) Tj
-0 -15 Td
-(Focused on solving real-world problems through technology.) Tj
-/F2 16 Tf
-0 -30 Td
-(EDUCATION) Tj
-/F2 11 Tf
-0 -18 Td
-(B.Tech in Computer Science Engineering (AI & ML)) Tj
-/F1 11 Tf
-0 -15 Td
-(Malla Reddy College of Engineering and Technology | CGPA: 9.5/10) Tj
-/F2 16 Tf
-0 -30 Td
-(PROFESSIONAL EXPERIENCE) Tj
-/F2 11 Tf
-0 -18 Td
-(AI Intern - Infosys Springboard) Tj
-/F1 11 Tf
-0 -15 Td
-(- Developed AI-powered ticket categorization systems) Tj
-0 -15 Td
-(- Applied NLP techniques for automation) Tj
-0 -15 Td
-(- Participated in testing and debugging) Tj
-0 -15 Td
-(- Contributed to documentation and workflow improvement) Tj
-/F2 16 Tf
-0 -30 Td
-(PROJECTS) Tj
-/F2 11 Tf
-0 -18 Td
-(AI Resume Analyzer) Tj
-/F1 11 Tf
-0 -15 Td
-(Python, Streamlit, NLP, Machine Learning) Tj
-0 -15 Td
-(ATS Score Analysis, Resume Feedback Generation, PDF Parsing, NLP-based Evaluation) Tj
-/F2 11 Tf
-0 -25 Td
-(AI Copilot for Software Engineers) Tj
-/F1 11 Tf
-0 -15 Td
-(Python, Streamlit, NLP, Generative AI) Tj
-0 -15 Td
-(Coding Assistance, Debugging Support, Intelligent Query Processing, Documentation Generation) Tj
-/F2 16 Tf
-0 -30 Td
-(SKILLS) Tj
-/F1 11 Tf
-0 -18 Td
-(Languages: Python, Java, C, SQL) Tj
-0 -15 Td
-(Web Technologies: HTML, CSS, JavaScript, React.js) Tj
-0 -15 Td
-(AI & Machine Learning: Machine Learning, NLP, Generative AI, Prompt Engineering) Tj
-0 -15 Td
-(Libraries & Tools: Pandas, NumPy, Scikit-learn, Streamlit, Git, GitHub, VS Code, Tableau) Tj
-0 -15 Td
-(Core Concepts: Data Structures & Algorithms, OOP, DBMS, REST APIs, Unit Testing, Debugging) Tj
-/F2 16 Tf
-0 -30 Td
-(LEADERSHIP & CERTIFICATIONS) Tj
-/F1 11 Tf
-0 -18 Td
-(- Student Coordinator: Organized hackathons, project expos, technical quizzes, student activities) Tj
-0 -15 Td
-(- Class Representative: Represented student concerns, facilitated communication, supported coordination) Tj
-0 -15 Td
-(- Certifications: IBM SkillsBuild (AI Fundamentals), Deloitte Technology Simulation, Google Cloud Study Jams) Tj
-ET
-endstream
-endobj
-"""
-
-def generate_pdf():
-    # Content of the stream
-    stream_content = """BT
-/F2 26 Tf
-50 780 Td
-(BINGI MANYA SAHASRA) Tj
-/F1 12 Tf
-0 -24 Td
-(Hyderabad, India | sahasramanya9@gmail.com | linkedin.com/in/manya2929 | github.com/ManyaSaaha9) Tj
-0 -25 Td
-(--------------------------------------------------------------------------------------------------o) Tj
-/F2 16 Tf
-0 -30 Td
-(PROFESSIONAL SUMMARY) Tj
-/F1 11 Tf
-0 -18 Td
-(Passionate Computer Science student specializing in Artificial Intelligence and Machine Learning with) Tj
-0 -15 Td
-(experience building AI-powered applications using Python, NLP, Machine Learning, and Generative AI.) Tj
-0 -15 Td
-(Focused on solving real-world problems through technology.) Tj
-/F2 16 Tf
-0 -30 Td
-(EDUCATION) Tj
-/F2 11 Tf
-0 -18 Td
-(B.Tech in Computer Science Engineering (AI & ML)) Tj
-/F1 11 Tf
-0 -15 Td
-(Malla Reddy College of Engineering and Technology | CGPA: 9.5/10) Tj
-/F2 16 Tf
-0 -30 Td
-(PROFESSIONAL EXPERIENCE) Tj
-/F2 11 Tf
-0 -18 Td
-(AI Intern - Infosys Springboard) Tj
-/F1 11 Tf
-0 -15 Td
-(- Developed AI-powered ticket categorization systems) Tj
-0 -15 Td
-(- Applied NLP techniques for automation) Tj
-0 -15 Td
-(- Participated in testing and debugging) Tj
-0 -15 Td
-(- Contributed to documentation and workflow improvement) Tj
-/F2 16 Tf
-0 -30 Td
-(PROJECTS) Tj
-/F2 11 Tf
-0 -18 Td
-(AI Resume Analyzer) Tj
-/F1 11 Tf
-0 -15 Td
-(Python, Streamlit, NLP, Machine Learning) Tj
-0 -15 Td
-(ATS Score Analysis, Resume Feedback Generation, PDF Parsing, NLP-based Evaluation) Tj
-/F2 11 Tf
-0 -25 Td
-(AI Copilot for Software Engineers) Tj
-/F1 11 Tf
-0 -15 Td
-(Python, Streamlit, NLP, Generative AI) Tj
-0 -15 Td
-(Coding Assistance, Debugging Support, Intelligent Query Processing, Documentation Generation) Tj
-/F2 16 Tf
-0 -30 Td
-(SKILLS) Tj
-/F1 11 Tf
-0 -18 Td
-(Languages: Python, Java, C, SQL | Web: HTML, CSS, JS, React.js) Tj
-0 -15 Td
-(AI & ML: Machine Learning, NLP, Generative AI, Prompt Engineering) Tj
-0 -15 Td
-(Libraries & Tools: Pandas, NumPy, Scikit-learn, Streamlit, Git, GitHub, VS Code, Tableau) Tj
-0 -15 Td
-(Concepts: Data Structures & Algorithms, OOP, DBMS, REST APIs, Unit Testing) Tj
-/F2 16 Tf
-0 -30 Td
-(LEADERSHIP & CERTIFICATIONS) Tj
-/F1 11 Tf
-0 -18 Td
-(- Student Coordinator: Organized hackathons, project expos, quizzes, and student activities) Tj
-0 -15 Td
-(- Class Representative: Represented student concerns, facilitated academic coordination) Tj
-0 -15 Td
-(- Certifications: IBM SkillsBuild (AI Fundamentals), Deloitte Tech Simulation, Google Cloud Study Jams) Tj
-ET"""
+def create_resume_pdf(filename="assets/docs/bingi_manya_sahasra_resume.pdf"):
+    # Page size: 595 x 842 (A4)
+    # Margins: Left 45, Right 550 (Width: 505)
     
-    stream_len = len(stream_content)
+    stream_lines = []
     
-    # Write objects and compute positions
-    objs = []
-    
-    # Header
-    objs.append(b"%PDF-1.4\n")
-    
-    # 1 0 obj
-    pos_1 = sum(len(x) for x in objs)
-    objs.append(b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n")
-    
-    # 2 0 obj
-    pos_2 = sum(len(x) for x in objs)
-    objs.append(b"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n")
-    
-    # 3 0 obj
-    pos_3 = sum(len(x) for x in objs)
-    objs.append(b"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>\nendobj\n")
-    
-    # 4 0 obj
-    pos_4 = sum(len(x) for x in objs)
-    objs.append(b"4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n")
-    
-    # 5 0 obj
-    pos_5 = sum(len(x) for x in objs)
-    objs.append(b"5 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>\nendobj\n")
-    
-    # 6 0 obj
-    pos_6 = sum(len(x) for x in objs)
-    stream_header = f"6 0 obj\n<< /Length {stream_len} >>\nstream\n".encode('ascii')
-    stream_body = stream_content.encode('ascii')
-    stream_footer = b"\nendstream\nendobj\n"
-    objs.append(stream_header + stream_body + stream_footer)
-    
-    # xref table
-    pos_xref = sum(len(x) for x in objs)
-    xref_table = f"xref\n0 7\n0000000000 65535 f \n{pos_1:010d} 00000 n \n{pos_2:010d} 00000 n \n{pos_3:010d} 00000 n \n{pos_4:010d} 00000 n \n{pos_5:010d} 00000 n \n{pos_6:010d} 00000 n \n".encode('ascii')
-    objs.append(xref_table)
-    
-    # trailer
-    trailer = f"trailer\n<< /Size 7 /Root 1 0 R >>\nstartxref\n{pos_xref}\n%%EOF\n".encode('ascii')
-    objs.append(trailer)
-    
-    # Create directory if not exists
-    os.makedirs('assets/docs', exist_ok=True)
-    
-    with open('assets/docs/bingi_manya_sahasra_resume.pdf', 'wb') as f:
-        f.write(b"".join(objs))
+    # Helper to add text at (x, y)
+    def add_text(x, y, font, size, text):
+        stream_lines.append(f"BT /{font} {size} Tf 1 0 0 1 {x:.1f} {y:.1f} Tm ({text}) Tj ET")
         
-    print("PDF generated successfully.")
+    def add_line(x1, y1, x2, y2, gray=0.75, width=0.75):
+        stream_lines.append(f"q {gray:.2f} {gray:.2f} {gray:.2f} RG {width:.2f} w {x1:.1f} {y1:.1f} m {x2:.1f} {y2:.1f} l S Q")
+
+    # Header
+    y = 800
+    add_text(182, y, "F2", 22, "Bingi Manya Sahasra")
+    
+    y -= 18
+    # Contact line 1: Centered
+    contact1 = "Hyderabad, Telangana, India | +91 86394 01281 | sahasramanya9@gmail.com"
+    add_text(128, y, "F1", 9.5, contact1)
+    
+    y -= 14
+    contact2 = "linkedin.com/in/manya2929 | github.com/ManyaSaaha9 | manya-portfolio-three.vercel.app"
+    add_text(105, y, "F1", 9.5, contact2)
+    
+    # Section helper
+    def section_header(title, cur_y):
+        cur_y -= 22
+        add_text(45, cur_y, "F2", 11, title)
+        cur_y -= 4
+        add_line(45, cur_y, 550, cur_y, gray=0.7, width=0.6)
+        return cur_y - 12
+
+    # 1. SUMMARY
+    y = section_header("SUMMARY", y)
+    add_text(45, y, "F1", 9.5, "Third-year B.Tech CSE \\(AI & ML\\) student with a 9.15 CGPA. I build AI projects in Python and am currently a Software")
+    y -= 13
+    add_text(45, y, "F1", 9.5, "Engineering Intern at UdyogahConnect.")
+    
+    # 2. SKILLS
+    y = section_header("SKILLS", y)
+    
+    skills = [
+        ("Languages:", " Python, Java, C, JavaScript", 62),
+        ("AI / ML:", " NLP, Sentence Transformers, scikit-learn, LLM APIs", 45),
+        ("Web:", " HTML, CSS, React, FastAPI, Streamlit", 35),
+        ("Tools & Database:", " Git, GitHub, VS Code, MySQL", 95),
+    ]
+    for label, items, w in skills:
+        add_text(45, y, "F2", 9.5, label)
+        add_text(45 + w, y, "F1", 9.5, items)
+        y -= 14
+        
+    # 3. PROJECTS
+    y = section_header("PROJECTS", y)
+    
+    # Project 1
+    add_text(45, y, "F2", 9.5, "AI Resume Analyzer")
+    add_text(145, y, "F1", 9.5, "| Python, Streamlit, NLP, Groq API")
+    add_text(515, y, "F1", 9.5, "GitHub")
+    y -= 13
+    add_text(50, y, "F1", 9, "\\225  Web app that scores how well a resume matches a job description and shows missing skills.")
+    y -= 12
+    add_text(50, y, "F1", 9, "\\225  Uses an AI model to give feedback and rewrite the resume for the job.")
+    y -= 15
+    
+    # Project 2
+    add_text(45, y, "F2", 9.5, "AI Copilot for Software Engineers")
+    add_text(215, y, "F1", 9.5, "| React, FastAPI, Python")
+    add_text(515, y, "F1", 9.5, "GitHub")
+    y -= 13
+    add_text(50, y, "F1", 9, "\\225  Full-stack assistant that helps developers explain, write and debug code using an AI model.")
+    y -= 12
+    
+    # 4. EXPERIENCE
+    y = section_header("EXPERIENCE", y)
+    
+    # Exp 1
+    add_text(45, y, "F2", 9.5, "Software Product Engineering Intern")
+    add_text(230, y, "F1", 9.5, "| UdyogahConnect Technologies")
+    add_text(465, y, "F1", 9.5, "Jul 2026 \\226 Present")
+    y -= 13
+    add_text(50, y, "F1", 9, "\\225  Working on a business software platform across web, mobile and AI features.")
+    y -= 15
+    
+    # Exp 2
+    add_text(45, y, "F2", 9.5, "AI Intern")
+    add_text(90, y, "F1", 9.5, "| Infosys Springboard")
+    add_text(455, y, "F1", 9.5, "Feb 2026 \\226 Mar 2026")
+    y -= 13
+    add_text(50, y, "F1", 9, "\\225  Worked in a team on an AI system that creates and categorizes support tickets using Python and NLP.")
+    y -= 12
+
+    # 5. EDUCATION
+    y = section_header("EDUCATION", y)
+    
+    # Edu 1
+    add_text(45, y, "F2", 9.5, "Malla Reddy College of Engineering and Technology")
+    add_text(490, y, "F1", 9.5, "2024 \\226 2028")
+    y -= 13
+    add_text(45, y, "F1", 9, "B.Tech, CSE \\(AI & ML\\) | CGPA: 9.15")
+    y -= 15
+    
+    # Edu 2
+    add_text(45, y, "F2", 9.5, "Bhavans Sri Aurobindo Junior College")
+    add_text(490, y, "F1", 9.5, "2022 \\226 2024")
+    y -= 13
+    add_text(45, y, "F1", 9, "Intermediate \\(MPC\\) | 94%")
+    y -= 15
+    
+    # Edu 3
+    add_text(45, y, "F2", 9.5, "Bhavans Sri Ramakrishna Vidyalaya")
+    add_text(525, y, "F1", 9.5, "2022")
+    y -= 13
+    add_text(45, y, "F1", 9, "SSC | CGPA: 9.9")
+    y -= 12
+
+    # 6. CERTIFICATIONS
+    y = section_header("CERTIFICATIONS", y)
+    certs = [
+        "Microsoft Certified: Azure AI Fundamentals \\226 Microsoft",
+        "Responsive Web Design \\226 freeCodeCamp",
+        "AI for Beginners \\226 HP LIFE",
+        "English Empower C1 \\226 Cambridge",
+        "19 Google Cloud Study Jams badges"
+    ]
+    for c in certs:
+        add_text(50, y, "F1", 9, f"\\225  {c}")
+        y -= 13
+    
+    # 7. LEADERSHIP & LANGUAGES
+    y = section_header("LEADERSHIP & LANGUAGES", y)
+    add_text(45, y, "F2", 9.5, "Technical Lead")
+    add_text(115, y, "F1", 9.5, "| Knowvation Learnings, MRCET Hub")
+    add_text(460, y, "F1", 9.5, "Aug 2026 \\226 Present")
+    y -= 14
+    add_text(45, y, "F2", 9.5, "Languages:")
+    add_text(105, y, "F1", 9.5, "English, Hindi, Telugu")
+
+    stream_content = "\n".join(stream_lines)
+    stream_bytes = stream_content.encode('latin1')
+    stream_len = len(stream_bytes)
+    
+    # Build PDF with WinAnsiEncoding fonts
+    pdf_parts = [
+        b"%PDF-1.4\n",
+        b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n",
+        b"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n",
+        b"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>\nendobj\n",
+        b"4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>\nendobj\n",
+        b"5 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>\nendobj\n",
+        f"6 0 obj\n<< /Length {stream_len} >>\nstream\n".encode('ascii') + stream_bytes + b"\nendstream\nendobj\n"
+    ]
+    
+    # Compute xref
+    objs = pdf_parts
+    pos_1 = len(objs[0])
+    pos_2 = pos_1 + len(objs[1])
+    pos_3 = pos_2 + len(objs[2])
+    pos_4 = pos_3 + len(objs[3])
+    pos_5 = pos_4 + len(objs[4])
+    pos_6 = pos_5 + len(objs[5])
+    pos_xref = pos_6 + len(objs[6])
+    
+    xref_table = (
+        f"xref\n0 7\n"
+        f"0000000000 65535 f \n"
+        f"{pos_1:010d} 00000 n \n"
+        f"{pos_2:010d} 00000 n \n"
+        f"{pos_3:010d} 00000 n \n"
+        f"{pos_4:010d} 00000 n \n"
+        f"{pos_5:010d} 00000 n \n"
+        f"{pos_6:010d} 00000 n \n"
+    ).encode('ascii')
+    
+    trailer = f"trailer\n<< /Size 7 /Root 1 0 R >>\nstartxref\n{pos_xref}\n%%EOF\n".encode('ascii')
+    
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'wb') as f:
+        f.write(b"".join(pdf_parts) + xref_table + trailer)
+        
+    print(f"Generated PDF: {filename} ({os.path.getsize(filename)} bytes)")
 
 if __name__ == '__main__':
-    generate_pdf()
+    create_resume_pdf()

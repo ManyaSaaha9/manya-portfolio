@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="AI & ML student specializing in Python, NLP, Machine Learning, Generative AI, and Software Development.">
+    content="Bingi Manya Sahasra - Third-year B.Tech CSE (AI & ML) student with a 9.15 CGPA, Software Product Engineering Intern at UdyogahConnect Technologies, building AI & ML applications in Python, NLP, and Full-Stack Web.">
   <meta name="keywords"
-    content="Bingi Manya Sahasra, Portfolio, AI student, Machine Learning Developer, Software Engineer, Resume, Streamlit, NLP, Hyderabad, India">
+    content="Bingi Manya Sahasra, Portfolio, AI student, Machine Learning Developer, Software Product Engineering Intern, UdyogahConnect, Resume, Streamlit, React, FastAPI, Groq API, NLP, Hyderabad, India">
   <meta name="author" content="Bingi Manya Sahasra">
-  <meta name="theme-color" content="#0F172A">
-  <title>Bingi Manya Sahasra | AI & ML Student Portfolio</title>
+  <meta name="theme-color" content="#05080F">
+  <title>Bingi Manya Sahasra | AI & ML Developer & Software Intern</title>
 
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,610 +23,692 @@
 
 <body>
 
-  <!-- AI Theme Constellation Particle Background Canvas -->
-  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <!-- Sticky Devert-Style Navigation Header -->
+  <header class="devert-navbar" id="header">
+    <div class="devert-navbar-inner">
+      <a href="#hero" class="devert-brand">
+        <div class="devert-badge-icon">M</div>
+        <div class="devert-brand-text">
+          <span class="devert-name">MANYA</span>
+          <span class="devert-sub">Portfolio</span>
+        </div>
+      </a>
 
-  <!-- Content Wrapper -->
-  <div class="content-wrapper">
+      <nav class="devert-nav-links" id="nav-menu" aria-label="Main Navigation">
+        <a href="#hero" class="devert-nav-link active">Home</a>
+        <a href="#about" class="devert-nav-link">About</a>
+        <a href="#skills" class="devert-nav-link">Skills</a>
+        <a href="#experience" class="devert-nav-link">Experience</a>
+        <a href="#education" class="devert-nav-link">Education</a>
+        <a href="#projects" class="devert-nav-link">Projects</a>
+        <a href="#leadership" class="devert-nav-link">Leadership</a>
+        <a href="#certifications" class="devert-nav-link">Certifications</a>
+        <a href="#contact" class="devert-nav-link">Contact</a>
+      </nav>
 
-    <!-- Sticky Navigation Header -->
-    <header id="header">
-      <div class="nav-container">
-        <a href="#hero" class="logo" id="logo-link">MANYA</a>
-
-        <nav class="nav-links" id="nav-menu" aria-label="Main Navigation">
-          <a href="#hero" class="nav-link active">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#experience" class="nav-link">Experience</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#education" class="nav-link">Education</a>
-          <a href="#leadership" class="nav-link">Leadership</a>
-          <a href="#certifications" class="nav-link">Certifications</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="assets/docs/bingi_manya_sahasra_resume.pdf" class="nav-btn"
-            download="Bingi_Manya_Sahasra_Resume.pdf"><i class="fa-solid fa-download"></i> Download Resume</a>
-        </nav>
-
-        <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false"
-          aria-controls="nav-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="devert-nav-actions">
+        <button type="button" id="theme-toggle" class="dv-mode-toggle" aria-label="Toggle light and dark mode" title="Light / Dark mode">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="assets/docs/bingi_manya_sahasra_resume.pdf" class="dv-btn-resume" download="Bingi_Manya_Sahasra_Resume.pdf">
+          <i class="fa-solid fa-arrow-down"></i> Resume
+        </a>
+        <button class="dv-hamburger" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main Content Area -->
-    <main>
+  <!-- Main Content Area -->
+  <main id="main">
 
-      <!-- 1. Hero Section -->
-      <section id="hero" class="reveal active">
-        <div class="hero-content">
-          <p class="hero-subtitle">Welcome to my Space</p>
-          <h1 class="hero-title">BINGI <span>MANYA</span> SAHASRA</h1>
-          <div class="hero-roles">
-            <span class="role">AI & ML Student</span> | <span>Software Developer</span> | <span>Problem Solver</span>
-          </div>
-          <p class="hero-desc">
-            Passionate Computer Science student specializing in Artificial Intelligence and Machine Learning with
-            experience building AI-powered applications using Python, NLP, Machine Learning, and Generative AI. Focused
-            on solving real-world problems through technology.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-folder-open"></i> View Projects</a>
-            <a href="assets/docs/bingi_manya_sahasra_resume.pdf" class="btn btn-secondary"
-              download="Bingi_Manya_Sahasra_Resume.pdf"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
-            <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
-          </div>
-          <div class="hero-socials">
-            <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer"
-              aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="mailto:sahasramanya9@gmail.com" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
+    <!-- 1. Hero Section (Devert Signature Style) -->
+    <section id="hero" class="hero-devert">
+      <div class="hero-tagline">
+        <span class="pulse-dot"></span> Available for Software & AI Roles
+      </div>
+
+      <div class="devert-hero-blocks">
+        <span class="hero-block block-lime">BINGI</span>
+        <span class="hero-block block-black">MANYA</span>
+        <span class="hero-block block-cyan">SAHASRA</span>
+      </div>
+
+      <p class="hero-desc">
+        Third-year B.Tech CSE (AI & ML) student with a 9.15 CGPA. I build AI projects in Python and am currently a Software Product Engineering Intern at UdyogahConnect Technologies.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="dv-btn dv-btn-black">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="dv-btn dv-btn-outline">About Manya</a>
+        <a href="assets/docs/bingi_manya_sahasra_resume.pdf" class="dv-btn dv-btn-lime" download="Bingi_Manya_Sahasra_Resume.pdf">
+          Download Resume <i class="fa-solid fa-download"></i>
+        </a>
+      </div>
+
+      <div class="hero-pills">
+        <span class="dv-pill"><i class="fa-solid fa-location-dot"></i> Hyderabad, India</span>
+        <span class="dv-pill"><i class="fa-solid fa-briefcase"></i> UdyogahConnect Intern</span>
+        <span class="dv-pill"><i class="fa-solid fa-graduation-cap"></i> 9.15 CGPA (AI & ML)</span>
+        <span class="dv-pill"><i class="fa-solid fa-bolt"></i> Python & Full-Stack</span>
+      </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="devert-section banner-canvas">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title">About Me</h2>
+          <span class="section-meta-count">Background & Profile</span>
         </div>
-      </section>
 
-      <!-- 2. About Me Section -->
-      <section id="about" class="reveal">
-        <h2 class="section-title">About <span>Me</span></h2>
-
-        <div class="about-grid">
-          <div class="about-info">
-            <p class="about-text">
-              I am an AI & ML student passionate about software development, machine learning, and emerging
-              technologies. I enjoy building intelligent systems, exploring innovative ideas, and collaborating on
-              projects that create real-world impact.
+        <div class="about-devert-grid">
+          <div class="about-intro-box">
+            <p class="about-intro-text">
+              Third-year B.Tech CSE (AI & ML) student with a 9.15 CGPA at Malla Reddy College of Engineering and Technology. I build AI projects in Python and am currently working as a Software Product Engineering Intern at UdyogahConnect Technologies, shipping features across web, mobile, and AI capabilities. Passionate about Natural Language Processing, Sentence Transformers, and full-stack software development.
             </p>
-
-            <div class="about-details">
-              <div class="detail-card">
-                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                <span class="detail-title">Degree & Branch</span>
-                <span class="detail-value">B.Tech in CSE (AI & ML)</span>
-                <span class="detail-sub">Malla Reddy College of Engineering & Technology</span>
-              </div>
-
-              <div class="detail-card">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <span class="detail-title">Location</span>
-                <span class="detail-value">Hyderabad, India</span>
-                <span class="detail-sub">Open to relocation & remote roles</span>
-              </div>
+            <div class="about-badge-row">
+              <span class="dv-pill"><i class="fa-brands fa-python"></i> Python & NLP</span>
+              <span class="dv-pill"><i class="fa-solid fa-robot"></i> LLM APIs & Groq</span>
+              <span class="dv-pill"><i class="fa-solid fa-code"></i> React & FastAPI</span>
             </div>
           </div>
 
+          <div class="about-stat-grid">
+            <div class="devert-stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <span class="stat-label">Current Role</span>
+              <span class="stat-val">Software Intern</span>
+              <span class="stat-sub">UdyogahConnect Technologies</span>
+            </div>
+            <div class="devert-stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <span class="stat-label">Degree & CGPA</span>
+              <span class="stat-val">9.15 / 10 CGPA</span>
+              <span class="stat-sub">MRCET (AI & ML)</span>
+            </div>
+            <div class="devert-stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <span class="stat-label">Location</span>
+              <span class="stat-val">Hyderabad, India</span>
+              <span class="stat-sub">Telangana · Hybrid / Remote</span>
+            </div>
+            <div class="devert-stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-language"></i></div>
+              <span class="stat-label">Languages</span>
+              <span class="stat-val">English, Hindi, Telugu</span>
+              <span class="stat-sub">Cambridge C1 Empower</span>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 3. Skills Section -->
-      <section id="skills" class="reveal">
-        <h2 class="section-title">My <span>Skills</span></h2>
-
-        <div class="skills-filter" role="tablist" aria-label="Skills Categorization">
-          <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All Skills</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="languages">Programming</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="web">Web Tech</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="ai">AI & ML</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="lib">Libraries & Frameworks</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="tools">Tools</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="concepts">Core Concepts</button>
+    <!-- 3. Skills Section (Devert Signature Lime Banner) -->
+    <section id="skills" class="devert-section banner-lime">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title">Skills</h2>
+          <span class="section-meta-count">Core Technologies & Tools</span>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-filters" role="tablist">
+          <button class="dv-filter-pill active" data-filter="all">All Skills</button>
+          <button class="dv-filter-pill" data-filter="languages">Programming</button>
+          <button class="dv-filter-pill" data-filter="ai">AI & ML</button>
+          <button class="dv-filter-pill" data-filter="web">Web Tech</button>
+          <button class="dv-filter-pill" data-filter="tools">Tools & Database</button>
+          <button class="dv-filter-pill" data-filter="concepts">Core Concepts</button>
+        </div>
+
+        <div class="skills-cards-grid">
           <!-- Programming Languages -->
-          <div class="skill-category-card" data-category="languages">
-            <div class="skill-card-header">
-              <i class="fa-solid fa-code"></i>
-              <h3>Programming Languages</h3>
+          <div class="dv-skill-card" data-category="languages">
+            <div class="dv-skill-card-head">
+              <span class="dv-skill-pill-tag">Core Languages</span>
+              <i class="fa-solid fa-code" style="font-size: 1.3rem;"></i>
             </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">C</span>
-              <span class="skill-tag">SQL</span>
-            </div>
-          </div>
-
-          <!-- Web Technologies -->
-          <div class="skill-category-card" data-category="web">
-            <div class="skill-card-header">
-              <i class="fa-solid fa-laptop-code"></i>
-              <h3>Web Technologies</h3>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">HTML</span>
-              <span class="skill-tag">CSS</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">React.js</span>
+            <h3>Programming Languages</h3>
+            <div class="dv-tag-cloud">
+              <span class="dv-tech-tag">Python</span>
+              <span class="dv-tech-tag">Java</span>
+              <span class="dv-tech-tag">C</span>
+              <span class="dv-tech-tag">JavaScript</span>
             </div>
           </div>
 
           <!-- AI & Machine Learning -->
-          <div class="skill-category-card" data-category="ai">
-            <div class="skill-card-header">
-              <i class="fa-solid fa-brain"></i>
-              <h3>AI & Machine Learning</h3>
+          <div class="dv-skill-card" data-category="ai">
+            <div class="dv-skill-card-head">
+              <span class="dv-skill-pill-tag">Intelligence</span>
+              <i class="fa-solid fa-brain" style="font-size: 1.3rem;"></i>
             </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Machine Learning</span>
-              <span class="skill-tag">NLP</span>
-              <span class="skill-tag">Generative AI</span>
-              <span class="skill-tag">Prompt Engineering</span>
-            </div>
-          </div>
-
-          <!-- Libraries & Frameworks -->
-          <div class="skill-category-card" data-category="lib">
-            <div class="skill-card-header">
-              <i class="fa-solid fa-cubes"></i>
-              <h3>Libraries & Frameworks</h3>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Pandas</span>
-              <span class="skill-tag">NumPy</span>
-              <span class="skill-tag">Scikit-learn</span>
-              <span class="skill-tag">Streamlit</span>
+            <h3>AI & Machine Learning</h3>
+            <div class="dv-tag-cloud">
+              <span class="dv-tech-tag">NLP</span>
+              <span class="dv-tech-tag">Sentence Transformers</span>
+              <span class="dv-tech-tag">scikit-learn</span>
+              <span class="dv-tech-tag">LLM APIs</span>
+              <span class="dv-tech-tag">Machine Learning</span>
+              <span class="dv-tech-tag">Generative AI</span>
             </div>
           </div>
 
-          <!-- Tools -->
-          <div class="skill-category-card" data-category="tools">
-            <div class="skill-card-header">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
-              <h3>Tools</h3>
+          <!-- Web Technologies -->
+          <div class="dv-skill-card" data-category="web">
+            <div class="dv-skill-card-head">
+              <span class="dv-skill-pill-tag">Frontend & API</span>
+              <i class="fa-solid fa-laptop-code" style="font-size: 1.3rem;"></i>
             </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">GitHub</span>
-              <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">Tableau</span>
+            <h3>Web Technologies</h3>
+            <div class="dv-tag-cloud">
+              <span class="dv-tech-tag">HTML</span>
+              <span class="dv-tech-tag">CSS</span>
+              <span class="dv-tech-tag">React</span>
+              <span class="dv-tech-tag">FastAPI</span>
+              <span class="dv-tech-tag">Streamlit</span>
+            </div>
+          </div>
+
+          <!-- Tools & Database -->
+          <div class="dv-skill-card" data-category="tools">
+            <div class="dv-skill-card-head">
+              <span class="dv-skill-pill-tag">Infrastructure</span>
+              <i class="fa-solid fa-database" style="font-size: 1.3rem;"></i>
+            </div>
+            <h3>Tools & Database</h3>
+            <div class="dv-tag-cloud">
+              <span class="dv-tech-tag">Git</span>
+              <span class="dv-tech-tag">GitHub</span>
+              <span class="dv-tech-tag">VS Code</span>
+              <span class="dv-tech-tag">MySQL</span>
             </div>
           </div>
 
           <!-- Core Concepts -->
-          <div class="skill-category-card" data-category="concepts">
-            <div class="skill-card-header">
-              <i class="fa-solid fa-gears"></i>
-              <h3>Core Concepts</h3>
+          <div class="dv-skill-card" data-category="concepts">
+            <div class="dv-skill-card-head">
+              <span class="dv-skill-pill-tag">CS Fundamentals</span>
+              <i class="fa-solid fa-gears" style="font-size: 1.3rem;"></i>
             </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Data Structures & Algorithms</span>
-              <span class="skill-tag">OOP</span>
-              <span class="skill-tag">DBMS</span>
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">API Integration</span>
-              <span class="skill-tag">Unit Testing</span>
-              <span class="skill-tag">Debugging</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Experience Section -->
-      <section id="experience" class="reveal">
-        <h2 class="section-title">Work <span>Experience</span></h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">AI Intern</h3>
-                  <span class="timeline-company">Infosys Springboard</span>
-                </div>
-                <span class="timeline-date">February 2026 – March 2026</span>
-              </div>
-              <ul class="timeline-responsibilities">
-                <li>
-                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                  <span>Developed and implemented an AI-powered ticket categorization system designed to automate
-                    classification.</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                  <span>Applied Natural Language Processing (NLP) techniques for structural analysis and context
-                    understanding.</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                  <span>Participated in writing comprehensive unit tests and debugging issues across system
-                    components.</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                  <span>Contributed to internal API documentation and optimization of processing workflows.</span>
-                </li>
-              </ul>
+            <h3>Core Concepts</h3>
+            <div class="dv-tag-cloud">
+              <span class="dv-tech-tag">Data Structures & Algorithms</span>
+              <span class="dv-tech-tag">OOP</span>
+              <span class="dv-tech-tag">DBMS</span>
+              <span class="dv-tech-tag">REST APIs</span>
+              <span class="dv-tech-tag">API Integration</span>
+              <span class="dv-tech-tag">Unit Testing</span>
+              <span class="dv-tech-tag">Debugging</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 4.5. Education Section -->
-      <section id="education" class="reveal">
-        <h2 class="section-title">My <span>Education</span></h2>
-
-        <div class="timeline">
-          <!-- 1. B.Tech -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">Bachelor of Technology (B.Tech)</h3>
-                  <span class="timeline-company">Malla Reddy College of Engineering and Technology,
-                    Hyderabad</span><br />
-                  <span class="timeline-company" style="font-size: 0.85rem; color: var(--text-secondary);">Computer
-                    Science Engineering (Artificial Intelligence & Machine Learning)</span>
-                </div>
-                <span class="timeline-date">2024 – 2028</span>
-              </div>
-              <ul class="timeline-responsibilities">
-                <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> <span><strong
-                      style="color: var(--accent);">CGPA: 9.5/10</strong></span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 2. Intermediate -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">Intermediate (MPC)</h3>
-                  <span class="timeline-company">Bhavans Aurobindo Junior College, Hyderabad</span>
-                </div>
-                <span class="timeline-date">2022 – 2024</span>
-              </div>
-              <ul class="timeline-responsibilities">
-                <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> <span><strong
-                      style="color: var(--accent);">Percentage: 97%</strong></span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- 3. SSC -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-header">
-                <div>
-                  <h3 class="timeline-role">Secondary School Certificate (SSC)</h3>
-                  <span class="timeline-company">Bhavans Sri Ramakrishna Vidyalaya, Hyderabad</span>
-                </div>
-                <span class="timeline-date">Completed: 2022</span>
-              </div>
-              <ul class="timeline-responsibilities">
-                <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> <span><strong
-                      style="color: var(--accent);">CGPA: 9.9/10</strong></span></li>
-              </ul>
-            </div>
-          </div>
+    <!-- 4. Work Experience (Devert Signature Pitch Black Banner) -->
+    <section id="experience" class="devert-section banner-black">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title" style="color: #FFFFFF;">Experience</h2>
+          <span class="section-meta-count">2 Shipped Roles</span>
         </div>
-      </section>
 
-      <!-- 5. Projects Section -->
-      <section id="projects" class="reveal">
-        <h2 class="section-title">My <span>Projects</span></h2>
-
-        <div class="projects-grid">
-          <!-- Project 1: AI Resume Analyzer -->
-          <article class="project-card">
+        <div class="experience-cards-grid">
+          <!-- Card 1: UdyogahConnect Technologies -->
+          <article class="dv-experience-card">
             <div>
-              <div class="project-header">
-                <div class="project-icon-box">
-                  <i class="fa-solid fa-file-invoice"></i>
-                </div>
-                <div class="project-links" style="display: flex; gap: 10px;">
-                  <a href="https://github.com/ManyaSaaha9/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                    style="padding: 6px 12px; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; width: auto; height: auto; border-radius: 6px;"><i
-                      class="fa-brands fa-github" style="margin-right: 5px;"></i> GitHub</a>
-                </div>
+              <div class="experience-top-meta">
+                <span class="role-type-pill">Current Role</span>
+                <span class="role-duration">Jul 2026 – Present</span>
               </div>
-              <div class="project-info">
-                <h3>AI Resume Analyzer</h3>
-                <ul class="project-features">
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Evaluates candidate resumes to
-                      generate an ATS compatibility score.</span></li>
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Extracts text and structures
-                      from PDF files using parser modules.</span></li>
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Generates descriptive resume
-                      feedback for key skill gaps.</span></li>
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Applies Natural Language
-                      Processing (NLP) to extract semantic relevance.</span></li>
-                </ul>
+              <div class="experience-title-group">
+                <h3>Software Product Engineering Intern</h3>
+                <span class="company-name">UdyogahConnect Technologies</span>
+              </div>
+              <ul class="experience-bullets" style="margin-top: 18px;">
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Working on a business software platform across web, mobile and AI features.</span></li>
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Developing full-stack features and optimizing platform workflows with responsive user experiences.</span></li>
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Integrating intelligent AI capabilities and APIs to enhance platform capabilities.</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 2: Infosys Springboard -->
+          <article class="dv-experience-card">
+            <div>
+              <div class="experience-top-meta">
+                <span class="role-type-pill completed">Completed</span>
+                <span class="role-duration">Feb 2026 – Mar 2026</span>
+              </div>
+              <div class="experience-title-group">
+                <h3>AI Intern</h3>
+                <span class="company-name">Infosys Springboard</span>
+              </div>
+              <ul class="experience-bullets" style="margin-top: 18px;">
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Worked in a team on an AI system that creates and categorizes support tickets using Python and NLP.</span></li>
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Applied Natural Language Processing (NLP) techniques for structural analysis and context understanding.</span></li>
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Participated in writing comprehensive unit tests and debugging issues across system components.</span></li>
+                <li><i class="fa-solid fa-arrow-right"></i> <span>Contributed to internal API documentation and optimization of processing workflows.</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Education Section -->
+    <section id="education" class="devert-section banner-canvas">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title">Education</h2>
+          <span class="section-meta-count">Academic Record</span>
+        </div>
+
+        <div class="education-cards-grid">
+          <!-- Edu 1 -->
+          <div class="dv-edu-card">
+            <div class="edu-badge-row">
+              <span class="edu-year-pill">2024 – 2028</span>
+              <span class="edu-score-pill">CGPA: 9.15/10</span>
+            </div>
+            <div>
+              <h3>Bachelor of Technology (B.Tech)</h3>
+              <p class="edu-college">Malla Reddy College of Engineering and Technology</p>
+              <p style="font-size: 0.85rem; color: var(--dv-text-muted); margin-top: 4px;">Computer Science Engineering (AI & ML)</p>
+            </div>
+          </div>
+
+          <!-- Edu 2 -->
+          <div class="dv-edu-card">
+            <div class="edu-badge-row">
+              <span class="edu-year-pill">2022 – 2024</span>
+              <span class="edu-score-pill">Percentage: 94%</span>
+            </div>
+            <div>
+              <h3>Intermediate (MPC)</h3>
+              <p class="edu-college">Bhavans Sri Aurobindo Junior College</p>
+              <p style="font-size: 0.85rem; color: var(--dv-text-muted); margin-top: 4px;">Hyderabad, Telangana</p>
+            </div>
+          </div>
+
+          <!-- Edu 3 -->
+          <div class="dv-edu-card">
+            <div class="edu-badge-row">
+              <span class="edu-year-pill">Completed: 2022</span>
+              <span class="edu-score-pill">CGPA: 9.9/10</span>
+            </div>
+            <div>
+              <h3>Secondary School Certificate (SSC)</h3>
+              <p class="edu-college">Bhavans Sri Ramakrishna Vidyalaya</p>
+              <p style="font-size: 0.85rem; color: var(--dv-text-muted); margin-top: 4px;">Hyderabad, Telangana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Projects Section (Devert Signature Electric Cyan Banner) -->
+    <section id="projects" class="devert-section banner-cyan">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title">Projects</h2>
+          <span class="section-meta-count">2 Shipped Repositories</span>
+        </div>
+
+        <div class="projects-cards-grid">
+          <!-- Project 1: AI Resume Analyzer -->
+          <article class="dv-project-card">
+            <div>
+              <div class="project-top-bar">
+                <span class="project-badge-pill">Groq API · Streamlit · NLP</span>
+                <i class="fa-solid fa-file-invoice" style="color: var(--dv-lime); font-size: 1.4rem;"></i>
+              </div>
+              <h3 style="margin-top: 14px;">AI Resume Analyzer</h3>
+              <ul class="project-desc-bullets">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Web app that scores how well a resume matches a job description and shows missing skills.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Uses an AI model to give actionable feedback and rewrite the resume for the target job.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Evaluates candidate resumes to generate ATS compatibility scores with deep semantic analytics.</span></li>
+              </ul>
+              <div class="project-stack-pills">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">Streamlit</span>
+                <span class="stack-tag">NLP</span>
+                <span class="stack-tag">Groq API</span>
               </div>
             </div>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">Machine Learning</span>
+            <div class="project-footer-action">
+              <a href="https://github.com/ManyaSaaha9/AI-Resume-Analyzer" target="_blank" rel="noopener noreferrer" class="dv-btn-view-role">
+                View on GitHub <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </article>
 
           <!-- Project 2: AI Copilot for Software Engineers -->
-          <article class="project-card">
+          <article class="dv-project-card">
             <div>
-              <div class="project-header">
-                <div class="project-icon-box">
-                  <i class="fa-solid fa-laptop-code"></i>
-                </div>
-                <div class="project-links" style="display: flex; gap: 10px;">
-                  <a href="https://github.com/ManyaSaaha9/AI_COPILOT" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                    style="padding: 6px 12px; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; width: auto; height: auto; border-radius: 6px;"><i
-                      class="fa-brands fa-github" style="margin-right: 5px;"></i> GitHub</a>
-                </div>
+              <div class="project-top-bar">
+                <span class="project-badge-pill">React · FastAPI · Python</span>
+                <i class="fa-solid fa-laptop-code" style="color: var(--dv-lime); font-size: 1.4rem;"></i>
               </div>
-              <div class="project-info">
-                <h3>AI Copilot for Software Engineers</h3>
-                <ul class="project-features">
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Provides real-time coding
-                      suggestions and autocomplete support.</span></li>
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Analyzes codebase syntax to
-                      isolate, identify, and debug logic errors.</span></li>
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Processes query workflows
-                      dynamically using AI engines.</span></li>
-                  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span>Generates structured markdown
-                      code documentation automatically.</span></li>
-                </ul>
+              <h3 style="margin-top: 14px;">AI Copilot for Software Engineers</h3>
+              <ul class="project-desc-bullets">
+                <li><i class="fa-solid fa-circle-check"></i> <span>Full-stack assistant that helps developers explain, write and debug code using an AI model.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Built with an interactive React frontend and high-performance asynchronous FastAPI backend.</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span>Analyzes codebase syntax to isolate, identify, and debug logic errors in real time.</span></li>
+              </ul>
+              <div class="project-stack-pills">
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">FastAPI</span>
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">LLM APIs</span>
               </div>
             </div>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">Generative AI</span>
+            <div class="project-footer-action">
+              <a href="https://github.com/ManyaSaaha9/AI_COPILOT" target="_blank" rel="noopener noreferrer" class="dv-btn-view-role">
+                View on GitHub <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 6. Leadership & Activities Section -->
-      <section id="leadership" class="reveal">
-        <h2 class="section-title">Leadership <span>Experience</span></h2>
+    <!-- 7. Leadership & Languages -->
+    <section id="leadership" class="devert-section banner-canvas">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title">Leadership</h2>
+          <span class="section-meta-count">Hub & Community</span>
+        </div>
 
-        <div class="leadership-grid">
-          <!-- Student Coordinator -->
-          <div class="leadership-card">
-            <div class="leadership-head">
-              <div class="leadership-icon">
-                <i class="fa-solid fa-people-group"></i>
+        <div class="leadership-cards-grid">
+          <!-- Card 1: Technical Lead -->
+          <div class="dv-leadership-card">
+            <div class="lead-head">
+              <div class="lead-icon-box"><i class="fa-solid fa-terminal"></i></div>
+              <div class="lead-title-group">
+                <h3>Technical Lead</h3>
+                <p>Knowvation Learnings, MRCET Hub · Aug 2026 – Present</p>
               </div>
-              <div class="leadership-title">
+            </div>
+            <ul class="lead-bullets">
+              <li><i class="fa-solid fa-circle-dot"></i> <span>Leading technical initiatives, workshops, and project teams across the campus hub.</span></li>
+              <li><i class="fa-solid fa-circle-dot"></i> <span>Guiding student developers on modern AI tools, Python development, and software design.</span></li>
+              <li><i class="fa-solid fa-circle-dot"></i> <span>Organizing hackathon tracks, code reviews, and developer bootcamps.</span></li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Student Coordinator -->
+          <div class="dv-leadership-card">
+            <div class="lead-head">
+              <div class="lead-icon-box"><i class="fa-solid fa-users"></i></div>
+              <div class="lead-title-group">
                 <h3>Student Coordinator</h3>
                 <p>MRCET CSE Department</p>
               </div>
             </div>
-            <ul class="leadership-list">
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Organized local and inter-college
-                  hackathons and developer challenges.</span></li>
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Managed project expo tracks and
-                  coordinated team evaluations.</span></li>
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Conducted departmental technical
-                  quizzes and coding rounds.</span></li>
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Facilitated student activities and
-                  hands-on technical labs.</span></li>
+            <ul class="lead-bullets">
+              <li><i class="fa-solid fa-circle-dot"></i> <span>Organized local and inter-college hackathons and developer challenges.</span></li>
+              <li><i class="fa-solid fa-circle-dot"></i> <span>Managed project expo tracks and coordinated team evaluations.</span></li>
+              <li><i class="fa-solid fa-circle-dot"></i> <span>Conducted departmental technical quizzes and coding rounds.</span></li>
             </ul>
           </div>
 
-          <!-- Class Representative -->
-          <div class="leadership-card">
-            <div class="leadership-head">
-              <div class="leadership-icon">
-                <i class="fa-solid fa-id-card-clip"></i>
-              </div>
-              <div class="leadership-title">
-                <h3>Class Representative</h3>
-                <p>CSE (AI & ML) Batch</p>
+          <!-- Card 3: Spoken Languages -->
+          <div class="dv-leadership-card">
+            <div class="lead-head">
+              <div class="lead-icon-box"><i class="fa-solid fa-language"></i></div>
+              <div class="lead-title-group">
+                <h3>Spoken Languages</h3>
+                <p>Multilingual Proficiency</p>
               </div>
             </div>
-            <ul class="leadership-list">
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Represented student academic feedback
-                  and logistical concerns.</span></li>
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Facilitated efficient daily
-                  communication between faculty and peers.</span></li>
-              <li><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> <span>Supported departmental coordination of
-                  lectures, exams, and labs.</span></li>
+            <ul class="lead-bullets">
+              <li><i class="fa-solid fa-circle-dot"></i> <span><strong>English:</strong> Professional proficiency (Cambridge English Empower C1 certified)</span></li>
+              <li><i class="fa-solid fa-circle-dot"></i> <span><strong>Hindi:</strong> Fluent conversational & working proficiency</span></li>
+              <li><i class="fa-solid fa-circle-dot"></i> <span><strong>Telugu:</strong> Native proficiency</span></li>
             </ul>
+            <div class="lang-pill-group">
+              <span class="lang-pill">English (C1)</span>
+              <span class="lang-pill">Hindi</span>
+              <span class="lang-pill">Telugu</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 7. Certifications Section -->
-      <section id="certifications" class="reveal">
-        <h2 class="section-title">Professional <span>Certifications</span></h2>
+    <!-- 8. Certifications Section -->
+    <section id="certifications" class="devert-section banner-canvas" style="border-top: 1.5px solid var(--dv-border);">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title">Credentials</h2>
+          <span class="section-meta-count">Verified Certifications</span>
+        </div>
 
-        <div class="cert-grid">
+        <div class="certifications-cards-grid">
           <!-- Cert 1 -->
-          <div class="cert-card">
-            <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-            <div class="cert-info">
-              <h3>IBM SkillsBuild</h3>
-              <p>Artificial Intelligence Fundamentals</p>
-              <a href="IBM.jpeg" class="cert-link" target="_blank" rel="noopener noreferrer"
-                style="display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 0.85rem; color: var(--accent);"><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i> View Credential</a>
+          <div class="dv-cert-card">
+            <div class="cert-icon-row">
+              <i class="fa-brands fa-microsoft cert-brand-icon"></i>
+              <span class="cert-issuer-badge">Microsoft</span>
+            </div>
+            <div>
+              <h3>Microsoft Certified: Azure AI Fundamentals</h3>
+              <p class="cert-desc">Cloud architecture, AI principles, and machine learning models on Azure.</p>
             </div>
           </div>
+
           <!-- Cert 2 -->
-          <div class="cert-card">
-            <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
-            <div class="cert-info">
-              <h3>Deloitte Technology</h3>
-              <p>Job Simulation Program Certificate</p>
-              <a href="deloitte.jpeg" class="cert-link" target="_blank" rel="noopener noreferrer"
-                style="display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 0.85rem; color: var(--accent);"><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i> View Credential</a>
+          <div class="dv-cert-card">
+            <div class="cert-icon-row">
+              <i class="fa-brands fa-free-code-camp cert-brand-icon"></i>
+              <span class="cert-issuer-badge">freeCodeCamp</span>
             </div>
+            <div>
+              <h3>Responsive Web Design</h3>
+              <p class="cert-desc">HTML5, modern CSS3 layouts, flexbox, grid, accessibility, and responsive UIs.</p>
+            </div>
+            <a href="https://www.freecodecamp.org/certification/fcc-e997e748-ff4f-437e-bde2-77bb9ce8cdd4/responsive-web-design"
+              target="_blank" rel="noopener noreferrer" class="cert-link-btn">
+              View Credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
+
           <!-- Cert 3 -->
-          <div class="cert-card">
-            <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="cert-info">
-              <h3>Google Cloud</h3>
-              <p>Cloud Study Jams Program</p>
-              <a href="https://www.credly.com/users/manya-sahasra/edit/badges/credly" class="cert-link" target="_blank"
-                rel="noopener noreferrer"
-                style="display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 0.85rem; color: var(--accent);"><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i> View Credential</a>
+          <div class="dv-cert-card">
+            <div class="cert-icon-row">
+              <i class="fa-solid fa-microchip cert-brand-icon"></i>
+              <span class="cert-issuer-badge">HP LIFE</span>
+            </div>
+            <div>
+              <h3>AI for Beginners</h3>
+              <p class="cert-desc">Foundations of machine intelligence, ethical applications, and modern AI tools.</p>
             </div>
           </div>
+
           <!-- Cert 4 -->
-          <div class="cert-card">
-            <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-            <div class="cert-info">
-              <h3>FreeCodeCamp</h3>
-              <p>Responsive Web Design & Developer Certification</p>
-              <a href="https://www.freecodecamp.org/certification/fcc-e997e748-ff4f-437e-bde2-77bb9ce8cdd4/responsive-web-design"
-                class="cert-link" target="_blank" rel="noopener noreferrer"
-                style="display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 0.85rem; color: var(--accent);"><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i> View Credential</a>
+          <div class="dv-cert-card">
+            <div class="cert-icon-row">
+              <i class="fa-solid fa-graduation-cap cert-brand-icon"></i>
+              <span class="cert-issuer-badge">Cambridge</span>
+            </div>
+            <div>
+              <h3>English Empower C1</h3>
+              <p class="cert-desc">Advanced professional fluency and technical communication certified by Cambridge.</p>
             </div>
           </div>
-          <!-- Credly Profile Link -->
-          <div class="cert-card"
-            style="grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; justify-content: center; text-align: center; background: rgba(56, 189, 248, 0.05);">
-            <div class="cert-info" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <h3>View All My Badges on Credly</h3>
-              <a href="https://www.credly.com/users/manya-sahasra/edit/badges/credly" class="btn btn-primary"
-                target="_blank" rel="noopener noreferrer"
-                style="padding: 10px 20px; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px;">
-                <i class="fa-solid fa-up-right-from-square"></i> Credly Profile
-              </a>
+
+          <!-- Cert 5 -->
+          <div class="dv-cert-card">
+            <div class="cert-icon-row">
+              <i class="fa-brands fa-google cert-brand-icon"></i>
+              <span class="cert-issuer-badge">Google Cloud</span>
             </div>
+            <div>
+              <h3>19 Google Cloud Study Jams Badges</h3>
+              <p class="cert-desc">Hands-on cloud engineering, generative AI, BigQuery, and Kubernetes labs.</p>
+            </div>
+            <a href="https://www.credly.com/users/manya-sahasra/edit/badges/credly"
+              target="_blank" rel="noopener noreferrer" class="cert-link-btn">
+              View on Credly <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <!-- Cert 6 -->
+          <div class="dv-cert-card">
+            <div class="cert-icon-row">
+              <i class="fa-solid fa-award cert-brand-icon"></i>
+              <span class="cert-issuer-badge">IBM</span>
+            </div>
+            <div>
+              <h3>Artificial Intelligence Fundamentals</h3>
+              <p class="cert-desc">Core AI algorithms, deep learning concepts, and business impact analysis.</p>
+            </div>
+            <a href="IBM.jpeg" target="_blank" rel="noopener noreferrer" class="cert-link-btn">
+              View Credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 8. Contact Section -->
-      <section id="contact" class="reveal">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
+    <!-- 9. Contact Section (Devert Signature Pitch Black Banner) -->
+    <section id="contact" class="devert-section banner-black">
+      <div class="section-inner">
+        <div class="devert-section-header">
+          <h2 class="section-huge-title" style="color: #FFFFFF;">Get In Touch</h2>
+          <span class="section-meta-count">Open for Opportunities</span>
+        </div>
 
-        <div class="contact-grid">
-          <div class="contact-info-panel">
-            <h3>Let's talk about your opportunities!</h3>
-            <p>
-              I am open to internships, entry-level software engineering roles, and collaborative AI/ML development.
-              Reach out via email or connect with me on socials!
-            </p>
+        <div class="contact-devert-grid">
+          <div class="contact-info-col">
+            <div>
+              <h3>Let's talk about opportunities!</h3>
+              <p style="margin-top: 14px;">
+                I am open to software engineering internships, entry-level engineering roles, and collaborative AI/ML development.
+                Reach out directly via phone or email!
+              </p>
+            </div>
 
-            <div class="contact-channels">
-              <a href="mailto:sahasramanya9@gmail.com" class="contact-channel" aria-label="Email Sahasra">
-                <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
-                <div class="channel-details">
-                  <span class="channel-label">Email Address</span>
-                  <span class="channel-value">sahasramanya9@gmail.com</span>
+            <div class="contact-channels-list">
+              <a href="tel:+918639401281" class="dv-contact-item" aria-label="Call Sahasra">
+                <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-item-label">Phone</span>
+                  <span class="contact-item-value">+91 86394 01281</span>
                 </div>
               </a>
 
-              <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer"
-                class="contact-channel" aria-label="LinkedIn Sahasra">
-                <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                <div class="channel-details">
-                  <span class="channel-label">LinkedIn</span>
-                  <span class="channel-value">linkedin.com/in/manya2929</span>
+              <a href="mailto:sahasramanya9@gmail.com" class="dv-contact-item" aria-label="Email Sahasra">
+                <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-item-label">Email</span>
+                  <span class="contact-item-value">sahasramanya9@gmail.com</span>
                 </div>
               </a>
 
-              <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer" class="contact-channel"
-                aria-label="GitHub Sahasra">
-                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
-                <div class="channel-details">
-                  <span class="channel-label">GitHub Link</span>
-                  <span class="channel-value">github.com/ManyaSaaha9</span>
+              <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer" class="dv-contact-item" aria-label="LinkedIn">
+                <div class="contact-item-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-item-label">LinkedIn</span>
+                  <span class="contact-item-value">linkedin.com/in/manya2929</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer" class="dv-contact-item" aria-label="GitHub">
+                <div class="contact-item-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-item-label">GitHub</span>
+                  <span class="contact-item-value">github.com/ManyaSaaha9</span>
+                </div>
+              </a>
+
+              <a href="https://manya-portfolio-three.vercel.app" target="_blank" rel="noopener noreferrer" class="dv-contact-item" aria-label="Live Portfolio">
+                <div class="contact-item-icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="contact-item-details">
+                  <span class="contact-item-label">Portfolio URL</span>
+                  <span class="contact-item-value">manya-portfolio-three.vercel.app</span>
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="contact-form-wrapper">
+          <div class="contact-form-box">
             <form id="portfolio-contact-form" novalidate>
-              <div class="form-row">
-                <div class="form-group">
+              <div class="form-row-2">
+                <div class="dv-form-group">
                   <label for="form-name">Full Name</label>
-                  <input type="text" id="form-name" class="form-control" placeholder="Your name" required>
+                  <input type="text" id="form-name" class="dv-input" placeholder="Your name" required>
                 </div>
-                <div class="form-group">
+                <div class="dv-form-group">
                   <label for="form-email">Email Address</label>
-                  <input type="email" id="form-email" class="form-control" placeholder="yourname@domain.com" required>
+                  <input type="email" id="form-email" class="dv-input" placeholder="yourname@domain.com" required>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="dv-form-group">
                 <label for="form-subject">Subject</label>
-                <input type="text" id="form-subject" class="form-control" placeholder="Regarding..." required>
+                <input type="text" id="form-subject" class="dv-input" placeholder="Regarding opportunities..." required>
               </div>
-              <div class="form-group">
+              <div class="dv-form-group">
                 <label for="form-message">Message</label>
-                <textarea id="form-message" class="form-control" placeholder="Write your message here..."
-                  required></textarea>
+                <textarea id="form-message" class="dv-input" placeholder="Tell me about what you are building..." required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-block"
-                style="width: 100%; border: none; cursor: pointer;">
-                <i class="fa-solid fa-paper-plane"></i> Send Message
+              <button type="submit" class="btn-send-message">
+                Send Message <i class="fa-solid fa-arrow-right"></i>
               </button>
             </form>
           </div>
         </div>
-      </section>
-
-    </main>
-
-    <!-- Scroll To Top Button -->
-    <button id="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-    <!-- Notification Toast Popup -->
-    <div class="toast" id="toast-message" role="alert" aria-live="assertive">
-      <i class="fa-solid fa-circle-check"></i>
-      <div class="toast-msg">
-        <h4 id="toast-title">Message Sent!</h4>
-        <p id="toast-body">Thank you. I will get back to you shortly.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-logo">MANYA<span>SAHASRA</span></div>
-        <p class="footer-copy">&copy; 2026 Bingi Manya Sahasra. All Rights Reserved.</p>
-        <div class="footer-socials">
-          <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer"
-            aria-label="GitHub Profile Link"><i class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn Profile Link"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="mailto:sahasramanya9@gmail.com" aria-label="Mail Link"><i class="fa-solid fa-envelope"></i></a>
+  </main>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Notification Toast Popup -->
+  <div class="toast" id="toast-message" role="alert" aria-live="assertive">
+    <i class="fa-solid fa-circle-check"></i>
+    <div class="toast-msg">
+      <h4 id="toast-title">Message Sent!</h4>
+      <p id="toast-body">Thank you. I will get back to you shortly.</p>
+    </div>
+  </div>
+
+  <!-- Devert-Style Footer -->
+  <footer class="devert-footer">
+    <div class="footer-inner">
+      <div class="devert-brand">
+        <div class="devert-badge-icon" style="width: 28px; height: 28px; font-size: 0.95rem;">M</div>
+        <div class="devert-brand-text">
+          <span class="devert-name" style="font-size: 1.1rem;">MANYA</span>
+          <span class="devert-sub">SAHASRA</span>
         </div>
       </div>
-    </footer>
 
-  </div>
+      <p class="footer-copy">&copy; 2026 Bingi Manya Sahasra. Built with passion & AI.</p>
+
+      <div class="footer-social-links">
+        <a href="https://github.com/ManyaSaaha9" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/manya2929" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:sahasramanya9@gmail.com" class="footer-social-icon" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="tel:+918639401281" class="footer-social-icon" aria-label="Phone">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Javascript Core Logic -->
   <script src="script.js"></script>
